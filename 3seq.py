@@ -29,11 +29,9 @@ for j in two_list:
 # print(int_two_list)
 
 # Вычитание 2го списка из 1го
-for k in int_two_list:
-    for l in int_one_list:
-        if l == k:
-            for s in range(1, int_one_list.count(l) + 1):
-                int_one_list.remove(l)
+for k in int_one_list[:]:
+    if k in int_two_list:
+        int_one_list.remove(k)
 
 # Вывод данных в консоль через запятую, согласно задания
 for i in range(len(int_one_list)):
